@@ -1,0 +1,14 @@
+﻿@model GeekJoke
+@{
+    ViewData["Title"] = "Geek Joke";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr class="my-4">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col-xs-10 col-md-6 text-center">
+        <h2>Here's a geek joke:</h2>
+        <hr class="my-4">
+        <p>@Model.joke</p>
+    </div>
+</div>
