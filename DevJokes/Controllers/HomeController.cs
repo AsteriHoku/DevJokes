@@ -64,7 +64,7 @@ public class HomeController : Controller
     public async Task<IActionResult> DarkJoke()
     {
         _client.DefaultRequestHeaders.Clear();
-        var uri = new Uri("https://v2.jokeapi.dev/joke/Dark");
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Dark?blacklistFlags=racist,sexist");
         var httpResponse = await _client.GetAsync(uri);
         var content = await httpResponse.Content.ReadAsStringAsync();
         var darkJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
