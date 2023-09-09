@@ -40,6 +40,16 @@ public class HomeController : Controller
         var geekJoke = JsonSerializer.Deserialize<GeekJoke>(content);
         return View(geekJoke);
     }
+    
+    public async Task<IActionResult> ProgrammingJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://official-joke-api.appspot.com/jokes/programming/random#");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var programmingJoke = JsonSerializer.Deserialize<List<DevJoke>>(content);
+        return View(programmingJoke?[0]);
+    }
 
     public IActionResult Sources()
     {
