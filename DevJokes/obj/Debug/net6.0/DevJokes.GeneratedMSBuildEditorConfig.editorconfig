@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\lixas\RiderProjects\DevJokes\DevJokes
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/ChristmasJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaHJpc3RtYXNKb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/DarkJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXJrSm9rZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/DevJoke.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXZKb2tlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -27,12 +35,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/MiscJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNaXNjSm9rZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/NSFWProgrammingJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOU0ZXUHJvZ3JhbW1pbmdKb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/ProgrammingJoke.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9ncmFtbWluZ0pva2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/PunJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQdW5Kb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/Sources.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb3VyY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/SpookyJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcG9va3lKb2tlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Shared/Error.cshtml]

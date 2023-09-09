@@ -47,8 +47,68 @@ public class HomeController : Controller
         var uri = new Uri("https://official-joke-api.appspot.com/jokes/programming/random#");
         var httpResponse = await _client.GetAsync(uri);
         var content = await httpResponse.Content.ReadAsStringAsync();
-        var programmingJoke = JsonSerializer.Deserialize<List<DevJoke>>(content);
+        var programmingJoke = JsonSerializer.Deserialize<List<ProgrammingJoke>>(content);
         return View(programmingJoke?[0]);
+    }
+    
+    public async Task<IActionResult> NSFWProgrammingJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Programming");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var programmingJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        return View(programmingJoke);
+    }
+    
+    public async Task<IActionResult> DarkJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Dark");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var darkJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        return View(darkJoke);
+    }
+    
+    public async Task<IActionResult> SpookyJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Spooky");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var spookyJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        return View(spookyJoke);
+    }
+    
+    public async Task<IActionResult> PunJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Pun");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var punJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        return View(punJoke);
+    }
+    
+    public async Task<IActionResult> MiscJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Miscellaneous");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var miscJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        return View(miscJoke);
+    }
+    
+    public async Task<IActionResult> ChristmasJoke()
+    {
+        _client.DefaultRequestHeaders.Clear();
+        var uri = new Uri("https://v2.jokeapi.dev/joke/Christmas");
+        var httpResponse = await _client.GetAsync(uri);
+        var content = await httpResponse.Content.ReadAsStringAsync();
+        var xmasJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        return View(xmasJoke);
     }
 
     public IActionResult Sources()

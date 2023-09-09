@@ -1,0 +1,33 @@
+﻿@model NSFWjoke
+@{
+    ViewData["Title"] = "Dark Joke";
+}
+
+<style>
+    h2 {
+    font-family: 'Courier New', monospace;
+    }
+</style>
+
+<h1>@ViewData["Title"]</h1>
+<hr class="my-4">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col-xs-10 col-md-6 text-center">
+        <h2>Here's a likely NSFW, likely quite dark joke:</h2>
+        <hr class="my-4">
+        @if (Model.type == "twopart")
+        {
+            <p>@Model.setup</p>
+            <p>@Model.delivery</p>
+        }
+        else
+        {
+            <p>@Model.joke</p>
+        }
+    </div>
+</div>
+<div class="text-center my-3">
+    <button type="button" class="btn btn-outline-info btn-lg">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DarkJoke">I'm brave enough for more</a>
+    </button>
+</div>
