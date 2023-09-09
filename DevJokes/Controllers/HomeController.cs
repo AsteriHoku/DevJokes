@@ -60,17 +60,7 @@ public class HomeController : Controller
         var programmingJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
         return View(programmingJoke);
     }
-    
-    public async Task<IActionResult> DarkJoke()
-    {
-        _client.DefaultRequestHeaders.Clear();
-        var uri = new Uri("https://v2.jokeapi.dev/joke/Dark?blacklistFlags=racist,sexist");
-        var httpResponse = await _client.GetAsync(uri);
-        var content = await httpResponse.Content.ReadAsStringAsync();
-        var darkJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
-        return View(darkJoke);
-    }
-    
+
     public async Task<IActionResult> SpookyJoke()
     {
         _client.DefaultRequestHeaders.Clear();
