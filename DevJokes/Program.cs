@@ -1,9 +1,13 @@
+using DevJokes.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<DevService>();
 
 var app = builder.Build();
 

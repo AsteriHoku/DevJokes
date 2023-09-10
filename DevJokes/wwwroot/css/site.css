@@ -79,3 +79,7 @@ input[type="submit"] {
 .geekfont {
   font-family: 'Courier New', monospace!important;
 }
+
+.tinyfont {
+  font-size: 0.6rem;
+}

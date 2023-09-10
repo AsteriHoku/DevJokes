@@ -8,7 +8,8 @@
 </style>
 
 <h1>@ViewData["Title"]</h1>
-<hr class="my-4">
+<h6 class="tinyfont" style="white-space: nowrap;">@Model.binary</h6>
+<hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a programming joke:</h2>
@@ -18,7 +19,7 @@
     </div>
 </div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info btn-lg button-font">
+    <button type="button" class="btn btn-info button-font">
         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ProgrammingJoke">++ || !++</a>
     </button>
 </div>
