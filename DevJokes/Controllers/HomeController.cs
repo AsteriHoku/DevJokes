@@ -19,9 +19,8 @@ public class HomeController : Controller
         _devService = devService;
     }
 
-    //TODO copy function
-    //font awesome - needs to be copied from node modules to wwwroot?
-    //icons
+    //TODO
+    //sweet alert for notify?
     //combine models into 1 VM
     //port logic to service layer
     //use viewbag/viewdata

@@ -40,12 +40,12 @@ footer {
   color: #e7e4e4;
 }
 
-button,
-input[type="button"],
-input[type="submit"] {
-  background-color: #007bff; /* Blue button background color */
-  color: #e7e4e4; /* Light text color for buttons */
-}
+/*button,*/
+/*input[type="button"],*/
+/*input[type="submit"] {*/
+/*  background-color: #007bff; !* Blue button background color *!*/
+/*  color: #e7e4e4; !* Light text color for buttons *!*/
+/*}*/
 
 .navbar {
   background-color: #333!important;
@@ -82,4 +82,10 @@ input[type="submit"] {
 
 .tinyfont {
   font-size: 0.6rem;
+  overflow: hidden;
+}
+
+#copyButton {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
 }

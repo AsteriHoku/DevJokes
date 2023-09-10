@@ -3,25 +3,39 @@
     ViewData["Title"] = "Misc Joke";
 }
 
-<style>
+<script>
+window.onload = function () {
+    const copyButton = document.getElementById("copyButton");
 
+    if (copyButton) {
+        copyButton.addEventListener("click", () => {
+            copyToClipboard();
+        });
+    }
+};
+</script>
+
+<style>
 </style>
 
-<h1>@ViewData["Title"]</h1>
+<h1><i class="fa-solid fa-user-astronaut mx-2"></i>@ViewData["Title"]</h1>
 <hr class="my-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a potentially NSFW misc joke:</h2>
         <hr class="my-4">
-        @if (Model.type == "twopart")
-        {
-            <p>@Model.setup</p>
-            <p>@Model.delivery</p>
-        }
-        else
-        {
-            <p>@Model.joke</p>
-        }
+        <div id="joke">
+            @if (Model.type == "twopart")
+            {
+                <p>@Model.setup</p>
+                <p>@Model.delivery</p>
+            }
+            else
+            {
+                <p>@Model.joke</p>
+            }
+        </div>
+        <button class="btn btn-outline-info" id="copyButton"><i class="fa-regular fa-copy" id="copyIcon"></i></button>
     </div>
 </div>
 <div class="text-center my-3">

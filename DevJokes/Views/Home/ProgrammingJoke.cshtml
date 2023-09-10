@@ -3,19 +3,35 @@
     ViewData["Title"] = "Programming Joke";
 }
 
-<style>
+<script>
+window.onload = function () {
+    const copyButton = document.getElementById("copyButton");
 
+    if (copyButton) {
+        copyButton.addEventListener("click", () => {
+            copyToClipboard();
+        });
+    }
+};
+</script>
+
+<style>
 </style>
 
-<h1>@ViewData["Title"]</h1>
+<h1><i class="fa-solid fa-code mx-2"></i>@ViewData["Title"]</h1>
 <h6 class="tinyfont" style="white-space: nowrap;">@Model.binary</h6>
 <hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a programming joke:</h2>
         <hr class="my-4">
-        <p>@Model.setup</p>
-        <p>@Model.punchline</p>
+        <div id="joke">
+            <p>@Model.setup</p>
+            <p>@Model.punchline</p>
+        </div>
+        <button class="btn btn-outline-info" id="copyButton">
+            <i class="fa-regular fa-copy" id="copyIcon"></i>
+        </button>
     </div>
 </div>
 <div class="text-center my-3">

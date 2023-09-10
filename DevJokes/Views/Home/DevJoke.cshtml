@@ -2,42 +2,34 @@
 @{
     ViewData["Title"] = "Dev Joke";
 }
+
 <script>
-const icon = document.getElementById("copyIcon");
+window.onload = function () {
+    const copyButton = document.getElementById("copyButton");
 
-icon.addEventListener("click", function() {
-    copyToClipboard();
-});
-
-function copyToClipboard() {
-    const element = document.getElementById("joke");
-    const textArea = document.createElement("textarea");
-    const textToCopy = element.textContent;
-    textArea.value = textToCopy;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-    alert("Text copied to clipboard: " + textToCopy);
-}
-
+    if (copyButton) {
+        copyButton.addEventListener("click", () => {
+            copyToClipboard();
+        });
+    }
+};
 </script>
 
 <style>
 </style>
 
-<h1>@ViewData["Title"]</h1>
+<h1><i class="fa-brands fa-dev mx-2"></i>@ViewData["Title"]</h1>
 <h6 class="tinyfont" style="white-space: nowrap;">@Model.binary</h6>
 <hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a dev joke:</h2>
         <hr class="my-4">
-        <div class="joke">
+        <div id="joke">
             <p>@Model.question</p>
             <p>@Model.punchline</p>
         </div>
-        <i class="fa-regular fa-copy" id="copyIcon"></i>
+        <button class="btn btn-outline-info" id="copyButton"><i class="fa-regular fa-copy" id="copyIcon"></i></button>
     </div>
 </div>
 <div class="text-center my-3">

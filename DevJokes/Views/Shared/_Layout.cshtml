@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/DevJokes.styles.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
-
+    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.css" />
 </head>
 <body>
 <header>
@@ -62,13 +61,14 @@
     <div class="container">
         &copy; 2023 - DevJokes - <i class="fa fa-link mx-1" aria-hidden="true"></i>
         <a asp-area="" asp-controller="Home" asp-action="Sources">Sources</a>
-        - <i class="fa fa-github mx-1"></i>
+        - <i class="fa-brands fa-github mx-1"></i>
         <a href="https://github.com/AsteriHoku/DevJokes" target="_blank">GitHub Repo</a>
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
