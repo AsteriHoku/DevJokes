@@ -19,6 +19,12 @@ public class HomeController : Controller
         _devService = devService;
     }
 
+    //TODO copy function
+    //font awesome - needs to be copied from node modules to wwwroot?
+    //icons
+    //combine models into 1 VM
+    //port logic to service layer
+    //use viewbag/viewdata
     public async Task<IActionResult> Index()
     {
         return View();
@@ -33,6 +39,10 @@ public class HomeController : Controller
         var content = await httpResponse.Content.ReadAsStringAsync();
         var devJoke = JsonSerializer.Deserialize<List<DevJoke>>(content)?[0];
         devJoke.binary = await _devService.GetSetDevVM(devJoke.punchline);
+        
+        ViewBag.Message = "Hello from ViewBag!";
+        ViewData["Message"] = "Hello from ViewData!";
+
         return View(devJoke);
     }
 

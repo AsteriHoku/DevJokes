@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/DevJokes.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+
 </head>
 <body>
 <header>
@@ -58,8 +60,10 @@
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2023 - DevJokes - <a asp-area="" asp-controller="Home" asp-action="Sources">Sources</a>
-        - <a href="https://github.com/AsteriHoku/DevJokes" target="_blank">GitHub Repo</a>
+        &copy; 2023 - DevJokes - <i class="fa fa-link mx-1" aria-hidden="true"></i>
+        <a asp-area="" asp-controller="Home" asp-action="Sources">Sources</a>
+        - <i class="fa fa-github mx-1"></i>
+        <a href="https://github.com/AsteriHoku/DevJokes" target="_blank">GitHub Repo</a>
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
