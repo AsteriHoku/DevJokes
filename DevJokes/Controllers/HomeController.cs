@@ -21,6 +21,7 @@ public class HomeController : Controller
         return View();
     }
 
+    [Route("/Dev")]
     public async Task<IActionResult> DevJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -31,6 +32,7 @@ public class HomeController : Controller
         return View(devJoke?[0]);
     }
 
+    [Route("/Geek")]
     public async Task<IActionResult> GeekJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -41,6 +43,7 @@ public class HomeController : Controller
         return View(geekJoke);
     }
     
+    [Route("/Programming")]
     public async Task<IActionResult> ProgrammingJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -51,6 +54,7 @@ public class HomeController : Controller
         return View(programmingJoke?[0]);
     }
     
+    [Route("/NSFWProgramming")]
     public async Task<IActionResult> NSFWProgrammingJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -61,6 +65,7 @@ public class HomeController : Controller
         return View(programmingJoke);
     }
 
+    [Route("/Spooky")]
     public async Task<IActionResult> SpookyJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -71,6 +76,7 @@ public class HomeController : Controller
         return View(spookyJoke);
     }
     
+    [Route("/Pun")]
     public async Task<IActionResult> PunJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -81,6 +87,7 @@ public class HomeController : Controller
         return View(punJoke);
     }
     
+    [Route("/Misc")]
     public async Task<IActionResult> MiscJoke()
     {
         _client.DefaultRequestHeaders.Clear();
@@ -91,6 +98,7 @@ public class HomeController : Controller
         return View(miscJoke);
     }
     
+    [Route("/Christmas")]
     public async Task<IActionResult> ChristmasJoke()
     {
         _client.DefaultRequestHeaders.Clear();

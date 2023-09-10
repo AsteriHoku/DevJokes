@@ -4,22 +4,20 @@
 }
 
 <style>
-    h2 {
-    font-family: 'Courier New', monospace;
-    }
+
 </style>
 
 <h1>@ViewData["Title"]</h1>
 <hr class="my-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
-        <h2>Here's a geek joke:</h2>
+        <h2 class="geekfont">Here's a geek joke:</h2>
         <hr class="my-4">
         <p>@Model.joke</p>
     </div>
 </div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info btn-lg">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GeekJoke">Rerun of that snack</a>
+    <button type="button" class="btn btn-info btn-lg button-font">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GeekJoke">rerun of that snack</a>
     </button>
 </div>

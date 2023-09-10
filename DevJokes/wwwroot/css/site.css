@@ -3,6 +3,9 @@
   html {
     font-size: 16px;
   }
+  a:visited {
+    color: #b072ea;
+  }
 }
 
 html {
@@ -66,4 +69,13 @@ input[type="submit"] {
 /* Optional: Style active navbar items differently (e.g., with a background color) */
 .navbar .active {
   background-color: #007bff!important; /* Example background color for active item */
+}
+
+.button-font {
+  font-family: 'Courier New', monospace;
+  font-weight: bolder;
+}
+
+.geekfont {
+  font-family: 'Courier New', monospace!important;
 }

@@ -24,11 +24,21 @@ a[b-sksdedv2c0] {
   border-color: #1861ac;
 }
 
+/*.border-top {*/
+/*  border-top: 1px solid transparent; !* Set a transparent border to maintain layout *!*/
+/*  background-image: linear-gradient(to right, #0606b4, transparent); !* Adjust gradient colors and direction as needed *!*/
+/*}*/
+
+/*.border-bottom {*/
+/*  border-bottom: 1px solid transparent; !* Set a transparent border to maintain layout *!*/
+/*  background-image: linear-gradient(to right, #0606b4, transparent); !* Adjust gradient colors and direction as needed *!*/
+/*}*/
+
 .border-top[b-sksdedv2c0] {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #949496!important;
 }
 .border-bottom[b-sksdedv2c0] {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #949496!important;
 }
 
 .box-shadow[b-sksdedv2c0] {
