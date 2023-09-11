@@ -24,3 +24,7 @@ C:\Users\lixas\RiderProjects\DevJokes\DevJokes\obj\Debug\net6.0\DevJokes.dll
 C:\Users\lixas\RiderProjects\DevJokes\DevJokes\obj\Debug\net6.0\ref\DevJokes.dll
 C:\Users\lixas\RiderProjects\DevJokes\DevJokes\obj\Debug\net6.0\DevJokes.pdb
 C:\Users\lixas\RiderProjects\DevJokes\DevJokes\obj\Debug\net6.0\DevJokes.genruntimeconfig.cache
+C:\Users\lixas\RiderProjects\DevJokes\DevJokes\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lixas\RiderProjects\DevJokes\DevJokes\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\lixas\RiderProjects\DevJokes\DevJokes\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lixas\RiderProjects\DevJokes\DevJokes\obj\Debug\net6.0\DevJokes.csproj.CopyComplete

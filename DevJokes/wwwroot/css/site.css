@@ -89,3 +89,7 @@ footer {
   border-color: #0dcaf0;
   color: #0dcaf0;
 }
+
+#refreshButton{
+  color: black!important;
+}

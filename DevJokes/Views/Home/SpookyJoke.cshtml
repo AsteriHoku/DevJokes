@@ -37,13 +37,22 @@ window.onload = function () {
                 <p>@Model.joke</p>
             }
         </div>
-        <button class="btn btn-outline-info" id="copyButton">
-            <i class="fa-regular fa-copy" id="copyIcon"></i>
-        </button>
     </div>
 </div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info button-font">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SpookyJoke">another slice of that pie-in-the-sky</a>
-    </button>
+    <div class="row d-flex">
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn btn-outline-info" id="copyButton">
+                <i class="fa-regular fa-copy mx-3" id="copyIcon"></i>
+            </button>
+        </div>
+        <div class="col-6 d-flex align-items-start">
+            <button class="btn btn-info button-font" id="refreshButton">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SpookyJoke">
+                    <i class="fa-solid fa-ghost mx-1"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                </a>
+            </button>
+        </div>
+    </div>
 </div>

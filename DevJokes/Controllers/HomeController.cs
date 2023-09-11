@@ -41,6 +41,9 @@ public class HomeController : Controller
         
         ViewBag.Message = "Hello from ViewBag!";
         ViewData["Message"] = "Hello from ViewData!";
+        
+        MemoryStream imageStream = await _devService.GenerateJokeCard(devJoke);
+        ViewBag.JokeCard = imageStream;
 
         return View(devJoke);
     }

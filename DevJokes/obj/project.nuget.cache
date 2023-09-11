@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DJzewsma1frVjuoAoYCwXeit+6yoQVwV8e56rUaRkyarChqEuU3MebIceUK8eymrVLrQ4kz8yZVk/iTjQ+zu+w==",
+  "dgSpecHash": "HRNNs1m15wN2lbDex8uWTAQQhYczVEZ9s7Hi9ON4GVGSkDIpOWWm5oi4S49Oqi975otrQcXOI7iyoLCF01HUmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lixas\\RiderProjects\\DevJokes\\DevJokes\\DevJokes.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lixas\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0-preview.7.23375.6\\microsoft.win32.systemevents.8.0.0-preview.7.23375.6.nupkg.sha512",
+    "C:\\Users\\lixas\\.nuget\\packages\\system.drawing.common\\8.0.0-preview.7.23375.5\\system.drawing.common.8.0.0-preview.7.23375.5.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -18,7 +18,9 @@ window.onload = function () {
 <style>
 </style>
 
-<h1><i class="fa-solid fa-code mx-2"></i>@ViewData["Title"]</h1>
+<h1>
+    <i class="fa-solid fa-code mx-2"></i>@ViewData["Title"]
+</h1>
 <h6 class="tinyfont" style="white-space: nowrap;">@Model.binary</h6>
 <hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
@@ -29,13 +31,19 @@ window.onload = function () {
             <p>@Model.setup</p>
             <p>@Model.punchline</p>
         </div>
-        <button class="btn btn-outline-info" id="copyButton">
-            <i class="fa-regular fa-copy" id="copyIcon"></i>
-        </button>
     </div>
 </div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info button-font">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ProgrammingJoke">++ || !++</a>
-    </button>
+    <div class="row d-flex">
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn btn-outline-info" id="copyButton">
+                <i class="fa-regular fa-copy mx-3" id="copyIcon"></i>
+            </button>
+        </div>
+        <div class="col-6 d-flex align-items-start">
+            <button class="btn btn-info button-font px-2" id="refreshButton">
+                <a class="nav-link text-dark px-0" asp-area="" asp-controller="Home" asp-action="ProgrammingJoke">++ || !++</a>
+            </button>
+        </div>
+    </div>
 </div>

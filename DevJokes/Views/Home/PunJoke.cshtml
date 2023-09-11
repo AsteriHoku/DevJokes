@@ -18,7 +18,9 @@ window.onload = function () {
 <style>
 </style>
 
-<h1><i class="fa-solid fa-person-falling-burst mx-2"></i>@ViewData["Title"]</h1>
+<h1>
+    <i class="fa-solid fa-person-falling-burst mx-2"></i>@ViewData["Title"]
+</h1>
 <hr class="my-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
@@ -35,13 +37,21 @@ window.onload = function () {
                 <p>@Model.joke</p>
             }
         </div>
-        <button class="btn btn-outline-info" id="copyButton">
-            <i class="fa-regular fa-copy" id="copyIcon"></i>
-        </button>
     </div>
 </div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info button-font">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PunJoke">round two of that treat</a>
-    </button>
+    <div class="row d-flex">
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn btn-outline-info" id="copyButton">
+                <i class="fa-regular fa-copy mx-3" id="copyIcon"></i>
+            </button>
+        </div>
+        <div class="col-6 d-flex align-items-start">
+            <button class="btn btn-info button-font" id="refreshButton">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PunJoke">
+                    <i class="fa-solid fa-repeat"></i>
+                </a>
+            </button>
+        </div>
+    </div>
 </div>

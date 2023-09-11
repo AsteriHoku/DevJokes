@@ -18,22 +18,30 @@ window.onload = function () {
 <style>
 </style>
 
-<h1><i class="fa-brands fa-dev mx-2"></i>@ViewData["Title"]</h1>
+<h1>
+    <i class="fa-brands fa-dev mx-2"></i>@ViewData["Title"]
+</h1>
 <h6 class="tinyfont" style="white-space: nowrap;">@Model.binary</h6>
 <hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a dev joke:</h2>
         <hr class="my-4">
-        <div id="joke">
-            <p>@Model.question</p>
-            <p>@Model.punchline</p>
-        </div>
-        <button class="btn btn-outline-info" id="copyButton"><i class="fa-regular fa-copy" id="copyIcon"></i></button>
+        @* <div id="joke"> *@
+        @*     <p>@Model.question</p> *@
+        @*     <p>@Model.punchline</p> *@
+        @* </div> *@
+        @* <button class="btn btn-outline-info" id="copyButton"><i class="fa-regular fa-copy" id="copyIcon"></i></button> *@
     </div>
 </div>
+<div class="container d-flex justify-content-center align-items-center">
+    <img src="data:image/png;base64,@Convert.ToBase64String(ViewBag.JokeCard.ToArray())" alt="Generated Image"/>
+</div>
+<div class="text-center">
+    <p>copy/save image to share</p>
+</div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info button-font">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DevJoke">I need a second performance from that dish</a>
+    <button type="button" class="btn btn-info button-font" id="refreshButton">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DevJoke"><i class="fa-solid fa-repeat"></i></a>
     </button>
 </div>
