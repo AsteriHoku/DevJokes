@@ -20,6 +20,7 @@ public class HomeController : Controller
     }
 
     //TODO
+    //unit tests
     //sweet alert for notify?
     //combine models into 1 VM
     //port logic to service layer

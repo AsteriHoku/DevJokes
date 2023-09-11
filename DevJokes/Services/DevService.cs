@@ -50,23 +50,17 @@ public class DevService
 
     public async Task<string> FormatJokeText(DevJoke joke)
     {
+        var len = 38;//length for bitMap with chosen font/size
         var sb = new StringBuilder();
-        var counter = 1;
-        var lastSpace = 0;
-        //split to have words
-        //append words 1 by 1 and keep count of current line length
-        //if length of word + length of line > 38, append \n first
         var words = joke.question.Split(" ");
+        var line = new StringBuilder();
 
         if (words[^1] == "." || words[^1] == "?")
             words[^2] = $"{words[^2]}{words[^1]}";
 
-        var line = new StringBuilder();
-
         foreach (var word in words)
         {
-            // +1 for the space and 38 is length for bitMap with chosen font/size
-            if (line.Length + word.Length + 1 <= 38)
+            if (line.Length + word.Length + 1 <= len)// +1 for the space
             {
                 if (line.Length > 0)
                     line.Append(' '); // Add space if not the first word in the line
@@ -79,21 +73,18 @@ public class DevService
                 line.Clear().Append(word);
             }
         }
-
         sb.Append(line.ToString()); // Append any remaining content
         sb.AppendLine("\n");
         
+        var pLine = new StringBuilder();
         var pWords = joke.punchline.Split(" ");
 
         if (pWords[^1] == "." || pWords[^1] == "?")
             pWords[^2] = $"{pWords[^2]}{pWords[^1]}";
-
-        var pLine = new StringBuilder();
-
+        
         foreach (var word in pWords)
         {
-            // +1 for the space and 38 is length for bitMap with chosen font/size
-            if (pLine.Length + word.Length + 1 <= 38)
+            if (pLine.Length + word.Length + 1 <= len)// +1 for the space
             {
                 if (pLine.Length > 0)
                     pLine.Append(' '); // Add space if not the first word in the pLine
