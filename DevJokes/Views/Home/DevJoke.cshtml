@@ -4,6 +4,7 @@
 }
 
 <script>
+
 window.onload = function () {
     const copyButton = document.getElementById("copyButton");
 
@@ -13,6 +14,11 @@ window.onload = function () {
         });
     }
 };
+
+$(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
 </script>
 
 <style>
@@ -21,27 +27,37 @@ window.onload = function () {
 <h1>
     <i class="fa-brands fa-dev mx-2"></i>@ViewData["Title"]
 </h1>
-<h6 class="tinyfont" style="white-space: nowrap;">@Model.binary</h6>
+<h6 class="tinyfont" style="white-space: nowrap;">@ViewBag.binary</h6>
 <hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a dev joke:</h2>
         <hr class="my-4">
-        @* <div id="joke"> *@
-        @*     <p>@Model.question</p> *@
-        @*     <p>@Model.punchline</p> *@
-        @* </div> *@
-        @* <button class="btn btn-outline-info" id="copyButton"><i class="fa-regular fa-copy" id="copyIcon"></i></button> *@
+        <div class="d-none" id="joke">
+            <p>@ViewBag.question</p>
+            <p>@ViewBag.punchline</p>
+        </div>
     </div>
 </div>
 <div class="container d-flex justify-content-center align-items-center">
     <img src="data:image/png;base64,@Convert.ToBase64String(ViewBag.JokeCard.ToArray())" alt="Generated Image"/>
 </div>
 <div class="text-center">
-    <p>to share: copy/save the above image</p>
+    <p class="infoText">to share: copy/save the above image or:</p>
 </div>
 <div class="text-center my-3">
-    <button type="button" class="btn btn-info button-font" id="refreshButton">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DevJoke"><i class="fa-solid fa-repeat"></i></a>
-    </button>
+    <div class="row d-flex">
+        <div class="col-6 d-flex justify-content-end px-1">
+            <button class="btn btn-outline-info" id="copyButton" data-toggle="tooltip" title="Copy Text">
+                <i class="fa-regular fa-copy mx-3" id="copyIcon"></i>
+            </button>
+        </div>
+        <div class="col-6 d-flex align-items-start px-1">
+            <button class="btn btn-info button-font" id="refreshButton" data-toggle="tooltip" title="Gimme Another">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="@ViewBag.aspaction">
+                    <i class="fa-solid fa-repeat"></i>
+                </a>
+            </button>
+        </div>
+    </div>
 </div>

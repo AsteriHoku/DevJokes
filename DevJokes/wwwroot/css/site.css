@@ -85,6 +85,10 @@ footer {
   overflow: hidden;
 }
 
+.infoText {
+  color: mediumaquamarine;
+}
+
 #copyButton {
   border-color: #0dcaf0;
   color: #0dcaf0;
