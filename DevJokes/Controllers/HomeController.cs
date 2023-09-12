@@ -24,7 +24,8 @@ public class HomeController : Controller
     //sweet alert for notify?
     //combine models into 1 VM
     //port logic to service layer
-    //use viewbag/viewdata
+    //port hard lists to models
+
     public async Task<IActionResult> Index()
     {
         return View();
@@ -33,30 +34,54 @@ public class HomeController : Controller
     [Route("/Dev")]
     public async Task<IActionResult> DevJoke()
     {
-        _client.DefaultRequestHeaders.Clear();
-        var uri = new Uri("https://backend-omega-seven.vercel.app/api/getjoke");
-        var httpResponse = await _client.GetAsync(uri);
-        var content = await httpResponse.Content.ReadAsStringAsync();
-        var devJoke = JsonSerializer.Deserialize<List<DevJoke>>(content)?[0];
-        devJoke.binary = await _devService.GetSetDevVM(devJoke.punchline);
-        
-        ViewBag.Message = "Hello from ViewBag!";
+        DevJoke devJoke;
+        int rand = new Random().Next(0, 2);
+        if (rand == 1)
+        {
+            _client.DefaultRequestHeaders.Clear();
+            var uri = new Uri("https://backend-omega-seven.vercel.app/api/getjoke");
+            var httpResponse = await _client.GetAsync(uri);
+            var content = await httpResponse.Content.ReadAsStringAsync();
+            devJoke = JsonSerializer.Deserialize<List<DevJoke>>(content)?[0];
+        }
+        else
+        {
+            devJoke = await _devService.NonAPIDevJoke();
+        }
+
         ViewData["Message"] = "Hello from ViewData!";
-        
-        MemoryStream imageStream = await _devService.GenerateJokeCard(devJoke);
+        ViewBag.binary = await _devService.GetSetDevVM(devJoke.punchline);
+        ViewBag.question = devJoke.question;
+        ViewBag.punchline = devJoke.punchline;
+        ViewBag.aspaction = "DevJoke";
+
+        MemoryStream imageStream = await _devService.GenerateDevJokeCard(devJoke);
         ViewBag.JokeCard = imageStream;
 
-        return View(devJoke);
+        return View();
     }
 
     [Route("/Geek")]
     public async Task<IActionResult> GeekJoke()
     {
-        _client.DefaultRequestHeaders.Clear();
-        var uri = new Uri("https://geek-jokes.sameerkumar.website/api?format=json");
-        var httpResponse = await _client.GetAsync(uri);
-        var content = await httpResponse.Content.ReadAsStringAsync();
-        var geekJoke = JsonSerializer.Deserialize<GeekJoke>(content);
+        GeekJoke geekJoke;
+        int rand = new Random().Next(0, 2);
+        if (rand == 1)
+        {
+            _client.DefaultRequestHeaders.Clear();
+            var uri = new Uri("https://geek-jokes.sameerkumar.website/api?format=json");
+            var httpResponse = await _client.GetAsync(uri);
+            var content = await httpResponse.Content.ReadAsStringAsync();
+            geekJoke = JsonSerializer.Deserialize<GeekJoke>(content);
+        }
+        else
+        {
+            geekJoke = await _devService.NonAPIGeekJoke();
+        }
+        
+        MemoryStream imageStream = await _devService.GenerateGeekJokeCard(geekJoke);
+        ViewBag.JokeCard = imageStream;
+
         return View(geekJoke);
     }
 
@@ -75,11 +100,21 @@ public class HomeController : Controller
     [Route("/NSFWProgramming")]
     public async Task<IActionResult> NSFWProgrammingJoke()
     {
-        _client.DefaultRequestHeaders.Clear();
-        var uri = new Uri("https://v2.jokeapi.dev/joke/Programming");
-        var httpResponse = await _client.GetAsync(uri);
-        var content = await httpResponse.Content.ReadAsStringAsync();
-        var programmingJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        NSFWjoke programmingJoke;
+        int rand = new Random().Next(0, 6);
+        if (rand == 1)
+        {
+            programmingJoke = await _devService.NonAPINSFWProgrammingJoke();
+        }
+        else
+        {
+            _client.DefaultRequestHeaders.Clear();
+            var uri = new Uri("https://v2.jokeapi.dev/joke/Programming");
+            var httpResponse = await _client.GetAsync(uri);
+            var content = await httpResponse.Content.ReadAsStringAsync();
+            programmingJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
+        }
+
         var binIn = programmingJoke?.joke ?? programmingJoke?.delivery;
         programmingJoke.lang = await _devService.GetSetDevVM(binIn);
         return View(programmingJoke);

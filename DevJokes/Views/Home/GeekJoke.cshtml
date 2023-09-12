@@ -4,6 +4,7 @@
 }
 
 <script>
+
 window.onload = function () {
     const copyButton = document.getElementById("copyButton");
 
@@ -13,6 +14,11 @@ window.onload = function () {
         });
     }
 };
+
+$(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
 </script>
 
 <style>
@@ -26,20 +32,26 @@ window.onload = function () {
     <div class="col-xs-10 col-md-6 text-center">
         <h2 class="geekfont">Here's a geek joke:</h2>
         <hr class="my-4">
-        <div id="joke">
+        <div class="d-none" id="joke">
             <p>@Model.joke</p>
         </div>
     </div>
 </div>
+<div class="container d-flex justify-content-center align-items-center">
+    <img src="data:image/png;base64,@Convert.ToBase64String(ViewBag.JokeCard.ToArray())" alt="Generated Image"/>
+</div>
+<div class="text-center">
+    <p class="infoText">to share: copy/save the above image or:</p>
+</div>
 <div class="text-center my-3">
     <div class="row d-flex">
-        <div class="col-6 d-flex justify-content-end">
-            <button class="btn btn-outline-info" id="copyButton">
+        <div class="col-6 d-flex justify-content-end px-1">
+            <button class="btn btn-outline-info" id="copyButton" data-toggle="tooltip" title="Copy Text">
                 <i class="fa-regular fa-copy mx-3" id="copyIcon"></i>
             </button>
         </div>
-        <div class="col-6 d-flex align-items-start">
-            <button class="btn btn-info button-font" id="refreshButton">
+        <div class="col-6 d-flex align-items-start px-1">
+            <button class="btn btn-info button-font" id="refreshButton" data-toggle="tooltip" title="Gimme Another">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GeekJoke">
                     <i class="fa-solid fa-repeat"></i>
                 </a>
