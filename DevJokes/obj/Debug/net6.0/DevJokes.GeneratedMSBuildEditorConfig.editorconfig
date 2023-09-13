@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\lixas\RiderProjects\DevJokes\DevJokes
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Pages/TechTerms/TechTerms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVjaFRlcm1zXFRlY2hUZXJtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/FakeData/FakePerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFrZURhdGFcRmFrZVBlcnNvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Home/ChristmasJoke.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaHJpc3RtYXNKb2tlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,6 +69,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/TechTerms/TechTerms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFRlcm1zXFRlY2hUZXJtcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lixas/RiderProjects/DevJokes/DevJokes/Views/_ViewImports.cshtml]

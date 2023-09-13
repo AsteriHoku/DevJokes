@@ -1,0 +1,45 @@
+﻿
+@{
+    // ViewBag.Title = "Fake Person Data";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h1>Fake Person Details</h1>
+    <table class="table table-bordered text-light">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">User</th>
+            <th scope="col">Identification</th>
+            <th scope="col">DoB/Age</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Cell</th>
+            <th scope="col">Nationality</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var p in ViewBag.peeps)
+        {
+            <tr>
+                <th scope="row">
+                    <div class="align-items-center">1</div><img src="@p.picture.thumbnail"></th>
+                <td>@p.name.first<br/>@p.name.last</td>
+                <td>@p.location.street.number @p.location.street.name<br/>@p.location.city<br/>@p.location.state<br/>@p.location.country<br/>@p.location.postcode</td>
+                <td>@p.gender</td>
+                <td>@p.email</td>
+                <td>uuid: @p.login.uuid<br/>username: @p.login.username<br/>pw: @p.login.password<br/>salt: @p.login.salt<br/>md5: @p.login.md5<br/>sha1: @p.login.sha1<br/>sha256: @p.login.sha256</td>
+                <td>name: @p.id.name<br/>value: @p.id.value</td>
+                <td>@p.dob.date<br/>@p.dob.age</td>
+                <td>@p.phone</td>
+                <td>@p.cell</td>
+                <td>@p.nat</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

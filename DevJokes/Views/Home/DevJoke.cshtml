@@ -27,11 +27,11 @@ $(document).ready(function () {
 <h1>
     <i class="fa-brands fa-dev mx-2"></i>@ViewData["Title"]
 </h1>
-<h6 class="tinyfont" style="white-space: nowrap;">@ViewBag.binary</h6>
+<h6 class="tiny-font" style="white-space: nowrap;">@ViewBag.binary</h6>
 <hr class="mt-2 mb-4">
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-xs-10 col-md-6 text-center">
-        <h2 class="geekfont">Here's a dev joke:</h2>
+        <h2 class="geek-font">Here's a dev joke:</h2>
         <hr class="my-4">
         <div class="d-none" id="joke">
             <p>@ViewBag.question</p>
@@ -43,7 +43,7 @@ $(document).ready(function () {
     <img src="data:image/png;base64,@Convert.ToBase64String(ViewBag.JokeCard.ToArray())" alt="Generated Image"/>
 </div>
 <div class="text-center">
-    <p class="infoText">to share: copy/save the above image or:</p>
+    <p class="info-text">to share: copy/save the above image or:</p>
 </div>
 <div class="text-center my-3">
     <div class="row d-flex">

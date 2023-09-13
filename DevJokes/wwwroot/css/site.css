@@ -30,12 +30,7 @@ a:visited {
   color: #b072ea;
 }
 
-header {
-  background-color: #444;
-  color: #e7e4e4;
-}
-
-footer {
+header, footer {
   background-color: #444;
   color: #e7e4e4;
 }
@@ -76,18 +71,22 @@ footer {
   font-weight: bolder;
 }
 
-.geekfont {
+.geek-font {
   font-family: 'Courier New', monospace!important;
 }
 
-.tinyfont {
+.tiny-font {
   font-size: 0.6rem;
   overflow: hidden;
 }
 
-.infoText {
+.info-text {
   color: mediumaquamarine;
 }
+
+/*.light-font {*/
+/*  color: #badce3;*/
+/*}*/
 
 #copyButton {
   border-color: #0dcaf0;
