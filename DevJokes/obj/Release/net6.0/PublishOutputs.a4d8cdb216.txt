@@ -1,7 +1,0 @@
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\DevJokes.exe
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\appsettings.Development.json
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\appsettings.json
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\DevJokes.dll
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\DevJokes.deps.json
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\DevJokes.runtimeconfig.json
-C:\Users\lixas\AppData\Local\Temp\rider-publish7519742500300769201\DevJokes.pdb
