@@ -49,14 +49,14 @@ public class DevService
     {
         var jokeQuestion = await FormatJokeText(joke.question);
         var jokePunchline = await FormatJokeText(joke.punchline);
-        var jokeText = $"{jokeQuestion}{jokePunchline}\n\n\n- devjokes.azurewebsites.net";
+        var jokeText = $"{jokeQuestion}{jokePunchline.Trim()}\n\n- devjokes.azurewebsites.net";
         return await StreamFromText(jokeText);
     }
 
     public async Task<MemoryStream> GenerateGeekJokeCard(GeekJoke joke)
     {
         var jokePunchline = await FormatJokeText(joke.joke);
-        var jokeText = $"{jokePunchline}\n\n- devjokes.azurewebsites.net";
+        var jokeText = $"{jokePunchline.Trim()}\n\n- devjokes.azurewebsites.net";
         return await StreamFromText(jokeText);
     }
 
@@ -90,7 +90,7 @@ public class DevService
     {
         var len = 38; //length for bitMap with chosen font/size
         var sb = new StringBuilder();
-        var words = jokePiece.Split(" ");
+        var words = jokePiece.Trim().Split(" ").Select(p => p.Trim());
         var line = new StringBuilder();
 
         // if (words[^1] == "." || words[^1] == "?")
@@ -100,13 +100,12 @@ public class DevService
             if (line.Length + word.Length + 1 <= len) { // +1 for the space
                 if (line.Length > 0)
                     line.Append(' '); // Add space if not the first word in the line
-
-                line.Append(word);
+                line.Append(word.Trim());
             } else {
-                sb.AppendLine(line.ToString()); // Start a new line
-                line.Clear().Append(word);
+                sb.AppendLine(line.ToString().Trim()); // Start a new line
+                line.Clear().Append(word.Trim());
             }
-            if (word.EndsWith("?") || word.EndsWith(")") || word.EndsWith("."))
+            if (word.EndsWith("?") || word.EndsWith(")") || word.EndsWith(".") || word.EndsWith(":"))
                 line.AppendLine("\n");
         }
         sb.Append(line.ToString()); // Append any remaining content

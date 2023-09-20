@@ -20,6 +20,7 @@ public class HomeController : Controller
     }
 
     //TODO
+    //fix fake person and uncomment nav link for it
     //unit tests
     //sweet alert for notify?
     //combine models into 1 VM
