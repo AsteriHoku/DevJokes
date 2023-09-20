@@ -93,8 +93,8 @@ public class DevService
         var words = jokePiece.Split(" ");
         var line = new StringBuilder();
 
-        if (words[^1] == "." || words[^1] == "?")
-            words[^2] = $"{words[^2]}{words[^1]}";
+        // if (words[^1] == "." || words[^1] == "?")
+        //     words[^2] = $"{words[^2]}{words[^1]}";
 
         foreach (var word in words)
         {
@@ -110,7 +110,7 @@ public class DevService
                 sb.AppendLine(line.ToString()); // Start a new line
                 line.Clear().Append(word);
             }
-            if (word.EndsWith("?"))
+            if (word.EndsWith("?") || word.EndsWith(")") || word.EndsWith("."))
                 line.AppendLine("\n");
         }
 
