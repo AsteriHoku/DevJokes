@@ -34,7 +34,6 @@ public class DevService
     public async Task<string> GetSetDevVM(string inputString)
     {
         var sb = new StringBuilder();
-
         byte[] binaryData = Encoding.ASCII.GetBytes(inputString);
 
         for (int i = 0; i < binaryData.Length; ++i)
@@ -86,6 +85,7 @@ public class DevService
         return stream;
     }
 
+    //todo change foreach to for loop
     public async Task<string> FormatJokeText(string jokePiece)
     {
         var len = 38; //length for bitMap with chosen font/size
@@ -96,24 +96,19 @@ public class DevService
         // if (words[^1] == "." || words[^1] == "?")
         //     words[^2] = $"{words[^2]}{words[^1]}";
 
-        foreach (var word in words)
-        {
-            if (line.Length + word.Length + 1 <= len) // +1 for the space
-            {
+        foreach (var word in words) {
+            if (line.Length + word.Length + 1 <= len) { // +1 for the space
                 if (line.Length > 0)
                     line.Append(' '); // Add space if not the first word in the line
 
                 line.Append(word);
-            }
-            else
-            {
+            } else {
                 sb.AppendLine(line.ToString()); // Start a new line
                 line.Clear().Append(word);
             }
             if (word.EndsWith("?") || word.EndsWith(")") || word.EndsWith("."))
                 line.AppendLine("\n");
         }
-
         sb.Append(line.ToString()); // Append any remaining content
 
         return sb.ToString();
